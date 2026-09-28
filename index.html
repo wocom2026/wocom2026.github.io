@@ -15,14 +15,17 @@
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
     display:flex;flex-direction:column;padding-inline:clamp(16px,6vw,64px);min-height:100%}
   main{flex:1;max-width:760px;width:100%;margin:0 auto;display:flex;flex-direction:column;justify-content:center;gap:18px;padding-block:48px}
-  footer{max-width:760px;width:100%;margin:0 auto;padding-block:22px 28px;border-top:1px solid rgba(246,240,243,.14);display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--soft)}
-  footer .row{display:flex;gap:10px 18px;flex-wrap:wrap;align-items:baseline}
-  footer .legal{font-size:13px;line-height:1.55;max-width:none;color:var(--soft);opacity:.85}
-  footer .legal[lang="en"]{opacity:.6;margin-top:-4px}
-  footer .k{letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--copper);font-weight:500}
+  footer{max-width:760px;width:100%;margin:0 auto;padding-block:26px 30px;border-top:1px solid rgba(246,240,243,.14);color:var(--soft)}
+  footer .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 28px;margin:0}
+  footer .grid div{display:flex;flex-direction:column;gap:6px;min-width:0}
+  footer dt{letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--copper);font-weight:500}
+  footer dd{margin:0;font-size:15px;line-height:1.5;color:var(--ink)}
+  footer .reg{margin:20px 0 0;padding-top:14px;border-top:1px solid rgba(246,240,243,.08);font-size:12.5px;line-height:1.5;color:var(--soft);opacity:.8;max-width:none;overflow-wrap:anywhere}
   footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(184,115,79,.6)}
   footer a:hover,footer a:focus-visible{color:var(--copper)}
   footer a:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+  @media (max-width:640px){footer .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (max-width:380px){footer .grid{grid-template-columns:1fr}}
   h1{margin:0;display:flex;align-items:flex-end;gap:.28em;flex-wrap:wrap;font-size:clamp(34px,7.5vw,76px);line-height:1}
   h1 .mark{height:.98em;width:auto;display:block}
   h1 .mark .wo{fill:var(--copper)} h1 .mark .com{fill:var(--ink)}
@@ -39,8 +42,13 @@
   <p>obchodní a&nbsp;servisní společnost</p>
 </main>
 <footer>
-  <div class="row"><span class="k">Kontakt</span><a href="mailto:info@wocom.cz">info@wocom.cz</a></div>
-  <p class="legal">wocom s.r.o., sídlo Varšavská 715/36, Vinohrady, 120&nbsp;00 Praha&nbsp;2, IČO 29951381. Společnost je zapsána v&nbsp;obchodním rejstříku vedeném Městským soudem v&nbsp;Praze, oddíl&nbsp;C, vložka 454992.</p>
+  <dl class="grid">
+    <div><dt>Společnost</dt><dd>wocom s.r.o.</dd></div>
+    <div><dt>Sídlo</dt><dd>Varšavská 715/36<br>Vinohrady<br>120&nbsp;00 Praha&nbsp;2</dd></div>
+    <div><dt>IČO</dt><dd>29951381</dd></div>
+    <div><dt>Kontakt</dt><dd><a href="mailto:info@wocom.cz">info@wocom.cz</a></dd></div>
+  </dl>
+  <p class="reg">Zapsáno v&nbsp;obchodním rejstříku vedeném Městským soudem v&nbsp;Praze, oddíl&nbsp;C, vložka 454992.</p>
 </footer>
 </body>
 </html>
