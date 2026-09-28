@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>wocom</title>
-<meta name="description" content="wocom s.r.o. – obchodní a servisní společnost.">
+<meta name="description" content="wocom s.r.o. – obchodní a servisní společnost, Praha.">
 <meta name="google" content="notranslate">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Hanken+Grotesk:wght@400;500;600&display=swap">
@@ -24,7 +24,11 @@
   footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(184,115,79,.6)}
   footer a:hover,footer a:focus-visible{color:var(--copper)}
   footer a:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
-  @media (max-width:640px){footer .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  footer .grid{grid-template-columns:repeat(4,auto);justify-content:space-between}
+  @media (min-width:781px){footer dd{white-space:nowrap}}
+  footer dd .sm{font-size:13px;color:var(--soft)}
+  footer dd .nw{white-space:nowrap}
+  @media (max-width:780px){footer .grid{grid-template-columns:repeat(2,minmax(0,1fr));justify-content:stretch}}
   @media (max-width:380px){footer .grid{grid-template-columns:1fr}}
   h1{margin:0;display:flex;align-items:flex-end;gap:.28em;flex-wrap:wrap;font-size:clamp(34px,7.5vw,76px);line-height:1}
   h1 .mark{height:.98em;width:auto;display:block}
@@ -43,12 +47,12 @@
 </main>
 <footer>
   <dl class="grid">
-    <div><dt>Společnost</dt><dd>wocom s.r.o.</dd></div>
-    <div><dt>Sídlo</dt><dd>Varšavská 715/36<br>Vinohrady<br>120&nbsp;00 Praha&nbsp;2</dd></div>
-    <div><dt>IČO</dt><dd>29951381</dd></div>
+    <div><dt>Společnost</dt><dd>wocom s.r.o.<br>Varšavská 715/36<br>120&nbsp;00 Praha&nbsp;2</dd></div>
+    <div><dt>Identifikace</dt><dd>IČ: 29951381<br>DIČ: CZ29951381<br>Datová schránka: 3vke9u</dd></div>
     <div><dt>Kontakt</dt><dd><a href="mailto:info@wocom.cz">info@wocom.cz</a></dd></div>
+    <div><dt>Bankovní spojení</dt><dd>Raiffeisenbank a.s.<br>2168251005&nbsp;/&nbsp;5500<br><span class="nw">CZ38&nbsp;5500 0000 0021 6825 1005</span><br>BIC/SWIFT: RZBCCZPP<br><span class="sm">účet v&nbsp;CZK, EUR a&nbsp;USD</span></dd></div>
   </dl>
-  <p class="reg">Zapsáno v&nbsp;obchodním rejstříku vedeném Městským soudem v&nbsp;Praze, oddíl&nbsp;C, vložka 454992.</p>
+  <p class="reg">Společnost je zapsána v&nbsp;obchodním rejstříku vedeném Městským soudem v&nbsp;Praze, oddíl&nbsp;C, vložka 454992.</p>
 </footer>
 </body>
 </html>
